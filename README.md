@@ -1,2 +1,2 @@
 # flask-boilerplate
-super simple of Flask boilerplate
+Super simple Flask boilerplate
