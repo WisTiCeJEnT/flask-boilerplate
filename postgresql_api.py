@@ -23,7 +23,6 @@ except (Exception, psycopg2.Error) as error :
     print ("Error while connecting to PostgreSQL", error)
 
 def get_student_data():
-    return ''
     cur = connection.cursor()
     cur.execute("""
     SELECT first_name, last_name 
@@ -33,5 +32,5 @@ def get_student_data():
     print('Student firstname:')
     print(rows)
     cur.close()
-    
+
 get_student_data()
