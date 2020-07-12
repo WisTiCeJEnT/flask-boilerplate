@@ -25,7 +25,7 @@ except (Exception, psycopg2.Error) as error :
 def get_student_data():
     cur = connection.cursor()
     cur.execute("""
-    SELECT first_name, last_name 
+    SELECT first_name, last_name, age 
     FROM student;
     """)
     rows = cur.fetchall()

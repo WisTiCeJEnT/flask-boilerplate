@@ -35,7 +35,7 @@ def mypage():
 @app.route('/std_list')
 def std_list():
     student_list = postgresql_api.get_student_data()
-    return str(student_list)
+    return render_template('table.html', student_list=student_list)
 
 if __name__ == "__main__":
     app.run(debug = True, host="0.0.0.0", port=5000)
