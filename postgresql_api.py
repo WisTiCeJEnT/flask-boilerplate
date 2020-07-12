@@ -32,5 +32,6 @@ def get_student_data():
     print('Student firstname:')
     print(rows)
     cur.close()
+    return rows
 
 get_student_data()
