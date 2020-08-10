@@ -1,6 +1,6 @@
 from flask import request, render_template, make_response, jsonify, abort, redirect, url_for
 from flask import current_app as app
-from .models import db, User, Product, Order, Station, Image
+from .models import db, Product
 from sqlalchemy import desc
 
 import traceback
@@ -29,6 +29,9 @@ def get_product_list():
 
 ################## BOF Zone ##################
 
+@app.route('/', methods=['GET'])
+def bof_root():
+    return 'working'
 
 ################## Support Zone ##################
 def try_get(inp, default):
